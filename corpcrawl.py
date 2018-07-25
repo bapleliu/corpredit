@@ -115,7 +115,7 @@ class GtClickShot(object):
         self.base_params = {
             'user': self.username,
             'pass2': self.password,
-            'softid': '895210',
+            'softid': '896920',
         }
         self.headers = {
             'Connection': 'Keep-Alive',
@@ -167,12 +167,12 @@ class CorpSearch(object):
         '''
         self.init_url=init_url
         self.index_url=index_url
-        self.driver=webdriver.Chrome()
+        self.driver=webdriver.Chrome("C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe")
         self.wait=WebDriverWait(self.driver,50)
         self.max_entertimes=max_click
         self.click_valitimes=0
         self.action=ActionChains(self.driver)
-        self.gt_shot=GtClickShot("xxx","xxxxxx")
+        self.gt_shot=GtClickShot("XXX","XXX")
         self.options=webdriver.ChromeOptions()
         self.headers=headers
         for option in self.headers:
@@ -640,7 +640,7 @@ if __name__=='__main__':
     detail_parse_rule={'primaryinfo':['string(//*[@id="primaryInfo"]/div/div[@class="overview"]/dl[{}])'.format(i) for i in range(15)],}
 
     max_click=10
-    search_list=["百度","腾讯","阿里巴巴"]
+    search_list=[u"百度",u"腾讯",u"阿里巴巴"]
     chm_headers=['Host="www.gsxt.gov.cn"',
                  'Connection="keep-alive"',
                  'User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"',
