@@ -288,8 +288,8 @@ class CorpSearch(object):
             返回滑动距离
         '''
         
-        befor_click_img="D:\\Anaconda3\\Lib\\captcha\\gt_validate\\befor_click.png"
-        after_click_path="D:\\Anaconda3\\Lib\\captcha\\gt_validate\\after_click.png"
+        befor_click_img="D:/git\Spider/company/corpredit/befor_click.png"
+        after_click_path="D:/git/Spider/company/corpredit/after_click.png"
         befor_img=cv2.imread(befor_click_img)
         after_img=cv2.imread(after_click_path)
 
@@ -598,7 +598,7 @@ class CorpSearch(object):
         
     #通过index界面或者点击首页继续检索时的爬取步骤
     def main(self,keyword,start_pg=None):
-        
+
         '''操作主程序
         args:
             keyword:查询关键词
@@ -606,7 +606,7 @@ class CorpSearch(object):
             start_pg:是否需要初始化访问加速乐，默认要
         
         '''
-        
+
         if start_pg == "homepage":
             self.switch_hmpg()
         else:
